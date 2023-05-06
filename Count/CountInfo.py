@@ -2,6 +2,7 @@ from pydantic import BaseModel, Field
 import time, os, psutil
 
 class CountInfo(BaseModel):
+    """ 测试程序运行耗时及内存占用 """
 
     # 运行时间
     time_result: float = Field(None)
