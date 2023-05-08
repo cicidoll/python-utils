@@ -1,1 +1,1 @@
-from .main import *
+from .PathLibMethods import PathLibMethods

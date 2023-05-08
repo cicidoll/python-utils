@@ -1,1 +1,1 @@
-from .Json import *
+from .JsonFile import JsonFile

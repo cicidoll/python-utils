@@ -2,6 +2,7 @@ import base64
 
 class Convert:
     """ 字符串格式转换方法 """
+    
     @staticmethod
     def str_convert_base64(input_str: str) -> str:
         """ 将字符串转为base64编码 """
