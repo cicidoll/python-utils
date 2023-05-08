@@ -1,6 +1,7 @@
 import json
 
 class JsonFile:
+    """ 操作json文件 """
 
     @staticmethod
     def load_json(filepath: str):
