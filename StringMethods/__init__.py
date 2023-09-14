@@ -1,2 +1,2 @@
-from .Convert import Convert
+from .Convert import StringConvert
 from .RandomString import RandomString
