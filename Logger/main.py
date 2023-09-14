@@ -7,6 +7,8 @@ import datetime, sys
 LOG_PATH = "logs"
 # INFO显示模板
 INFO_FORMAT_TEMPLATE = "<green>{time: YYYY/MM/DD HH:mm:ss}</green> <red>|</red> <green>{level}</green> <red>|</red> {message}"
+# SUCCESS显示模板
+SUCCESS_FORMAT_TEMPLATE = INFO_FORMAT_TEMPLATE
 # Warning显示模板
 WARNING_FORMAT_TEMPLATE = "<green>{time: YYYY/MM/DD HH:mm:ss}</green> <red>|</red> <yellow>{level}</yellow> <red>|</red> {message}"
 # ERROR显示模板
@@ -18,7 +20,6 @@ def level_filter(level: str):
     def is_level(record: dict):
         return record["level"].name == level
     return is_level
-
 
 class LocalLogger:
     """ 日志封装 """
@@ -49,7 +50,7 @@ class LocalLogger:
         # 添加日志配置
         self.logger.add(
             sink = sys.stderr,
-            format = INFO_FORMAT_TEMPLATE,
+            format = SUCCESS_FORMAT_TEMPLATE,
             level = "SUCCESS",
             filter = level_filter(level = "SUCCESS")
         )
