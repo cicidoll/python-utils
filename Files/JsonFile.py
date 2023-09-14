@@ -4,7 +4,7 @@ class JsonFile:
     """ 操作json文件 """
 
     @staticmethod
-    def load_json(filepath: str):
+    def load_json(filepath: str) -> dict:
         """ 读取json文件 """
         try:
             with open(filepath, 'r', encoding='utf8') as (json_file):

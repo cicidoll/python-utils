@@ -19,7 +19,7 @@ class CountInfo(BaseModel):
         return int_time
     
     def count_memory(self, func) -> callable:
-        """ 装饰器：记录占用内存(单位：MB) """
+        """ 装饰器：记录占用内存(单位: MB) """
         def float_memory():
             pid = os.getpid()
             p = psutil.Process(pid)
